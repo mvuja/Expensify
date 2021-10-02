@@ -1,0 +1,36 @@
+.expenses-filter {
+    color: #242035;
+    padding: 0 1rem;
+  }
+  
+  .expenses-filter__control {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  
+  .expenses-filter label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .expenses-filter select {
+    font: inherit;
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    background: #e9e9e9;
+    box-shadow: -4px -4px 7px #ffffffcc,
+    4px 4px 7px #00000033;
+    cursor: pointer;
+  }
+  .expenses-filter select:focus,
+  .expenses-filter select:active{
+    border: none;
+    outline: none;
+    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+    inset 8px 8px 8px rgba(0, 0, 0, 0.1);
+  }
