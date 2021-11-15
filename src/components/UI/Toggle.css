@@ -1,44 +1,82 @@
+.dark-mode-container{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dark-mode-container p{
+  color: #3a3a3a;
+  margin: 0;
+  margin-top: .5rem;
+  transition: color .2s ease;
+}
+
+@media only screen and (max-width: 1050px){
+  .dark-mode-container{
+    top: 1rem;
+    right: 1rem;
+  }
+  .dark-mode-container p{
+    font-size: .8rem;
+  }
+}
+
+.dark-mode .dark-mode-container p{
+  color: #d1d1d1;
+}
+
 .label {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    color: #394a56;
-    position: absolute;
-    top: 0;
-    right: 2rem;
-    display: none;
-  }
-  
-  .toggle {
-    isolation: isolate;
-    position: relative;
-    height: 30px;
-    width: 60px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow:
-      -8px -4px 8px #ffffff,
-      8px 4px 12px #3f3f3f33,
-      4px 4px 4px #3f3f3f33 inset,
-      -4px -4px 4px #ffffff inset;
-  }
-  
-  .toggle-state {
-    display: none;
-  }
-  
-  .indicator {
-    height: 100%;
-    width: 200%;
-    background: #ecf0f3;
-    border-radius: 15px;
-    transform: translate3d(-75%, 0, 0);
-    transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-    box-shadow:
-      -8px -4px 8px 0px #ffffff,
-      8px 4px 12px 0px #d1d9e6;
-  }
-  
-  .toggle-state:checked ~ .indicator {
-    transform: translate3d(25%, 0, 0);
-  }
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle {
+  isolation: isolate;
+  position: relative;
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow:
+  3px 3px 6px #bebebe,
+    3px 3px 6px #3f3f3f33,
+    3px 3px 6px #3f3f3f33 inset,
+    -3px -3px 6px #ffffff inset;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+.dark-mode .toggle{
+  box-shadow:
+  3px 3px 6px #101114,
+    3px 3px 6px #24252a,
+    3px 3px 6px #101114 inset,
+    -3px -3px 6px #24252a inset;
+}
+
+.toggle-state {
+  display: none;
+}
+
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: #ecf0f3;
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35), background .2s ease, box-shadow .2s ease;
+  box-shadow:  3px 3px 6px #bebebe, 
+                -3px -3px 6px #ffffff;
+}
+
+.dark-mode .indicator{
+  background: #0e0f11;
+  box-shadow:  3px 3px 6px #101114, 
+                -3px -3px 6px #24252a;
+}
+.toggle-state:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+}

@@ -1,5 +1,15 @@
 .card{
     border-radius: 12px;
-    box-shadow: -6px -6px 10px #ffffffcc,
-    6px 6px 10px #00000033;
+    /* box-shadow: -6px -6px 10px #ffffffcc,
+    6px 6px 10px #00000033; */
+
+    box-shadow:  3px 3px 6px #bebebe, 
+                 -3px -3px 6px #ffffff;
+    transition: background .2s ease, box-shadow .2s ease;
+}
+
+.dark-mode .card{
+    background: #1A1B1F;
+    box-shadow:  3px 3px 6px #101114, 
+                 -3px -3px 6px #24252a;
 }

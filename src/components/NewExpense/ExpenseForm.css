@@ -1,4 +1,4 @@
-.new-expense__controls {
+.new-expense__controls{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -6,32 +6,51 @@
     text-align: left;
   }
   
-  .new-expense__control label {
+  .new-expense__control label{
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
+    transition: color .2s ease;
+  }
+
+  .dark-mode .new-expense__control label{
+    color: #d1d1d1;
   }
   
-  .new-expense__control input {
+  .new-expense__control input{
     font: inherit;
     padding: 0.5rem;
     border-radius: 6px;
     border: none;
     width: 20rem;
     max-width: 100%;
-    background: #E9E9E9;
-    box-shadow: -4px -4px 7px #ffffffcc,
-    4px 4px 7px #00000033;
+    background: #ebebeb;
+    box-shadow:  3px 3px 6px #bebebe, 
+                 -3px -3px 6px #ffffff;
+    transition: background .2s ease, box-shadow .2s ease, color .2s ease;
+  }
+
+  .dark-mode .new-expense__control input{
+    color: #d1d1d1;
+    background: #1A1B1F;
+    box-shadow:  3px 3px 6px #101114, 
+                 -3px -3px 6px #24252a;
   }
   
   .new-expense__control input:focus,
   .new-expense__control input:active{
     outline: none;
     border: none;
-    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-    inset 8px 8px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 3px 3px 6px #bebebe, 
+    inset -3px -3px 6px #ffffff;
   }
 
-  .new-expense__actions {
+  .dark-mode .new-expense__control input:focus,
+  .dark-mode .new-expense__control input:active{
+    box-shadow: inset 3px 3px 6px #101114, 
+    inset -3px -3px 6px #24252a;
+  }
+
+  .new-expense__actions{
     text-align: right;
   }

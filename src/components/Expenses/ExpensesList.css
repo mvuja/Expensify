@@ -6,4 +6,9 @@
   .expenses-list__fallback {
     color: #242035;
     text-align: center;
+    transition: color .2s ease;
+  }
+
+  .dark-mode .expenses-list__fallback{
+    color: #d1d1d1;
   }

@@ -10,23 +10,39 @@
     width: 100%;
     /* border: 1px solid #ffffff; */
     border-radius: 12px;
-    background-color: #ebebeb;
+    background: #ebebeb;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    box-shadow: -4px -4px 5px #ffffffcc,
-    4px 4px 5px #00000033;
+    box-shadow:  3px 3px 6px #bebebe, 
+                 -3px -3px 6px #ffffff;
+    transition: background .2s ease, box-shadow .2s ease;
+  }
+
+  .dark-mode .chart-bar__inner{
+    background: #1A1B1F;
+    box-shadow:  3px 3px 6px #101114, 
+                 -3px -3px 6px #24252a;
   }
   
   .chart-bar__fill {
     background-color: #424242;
     width: 100%;
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease-out;
+  }
+
+  .dark-mode .chart-bar__fill{
+    background: #d1d1d1;
   }
   
   .chart-bar__label {
     font-weight: bold;
     font-size: 0.5rem;
     text-align: center;
+    transition: color .2s ease;
+  }
+
+  .dark-mode .chart-bar__label{
+    color: #d1d1d1;
   }
