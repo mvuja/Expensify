@@ -2,6 +2,21 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*:focus {
+  outline: 0;
+}
+
+::-moz-selection {
+  background: #1A1B1F;
+  color: #fff;
+}
+
+::selection {
+  background: #1A1B1F;
+  color: #fff;
 }
 
 html {
